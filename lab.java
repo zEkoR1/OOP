@@ -1,4 +1,5 @@
-public class Car {
+
+public class lab {
 float speed = 0;
 boolean isMoving = false;
 public void stop() {
