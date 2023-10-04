@@ -10,12 +10,22 @@ public class University {
         faculties.add(faculty);
     }
 
+    public List<Faculty> getAllFaculties() {
+        return this.faculties;
+    }
+
+    public void setFaculties(List<Faculty> faculties){
+        this.faculties = faculties;
+    }
+
     @Override
     public String toString() {
         StringBuilder text = new StringBuilder();
         for (int i = 0; i < this.faculties.size(); i++)
-            text.append(this.faculties.get(i) + "/n");
+            text.append(this.faculties.get(i) + "\n");
         return text.toString();
 
     }
+
 }
+
