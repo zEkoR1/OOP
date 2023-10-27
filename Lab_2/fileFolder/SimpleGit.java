@@ -1,4 +1,4 @@
-package Lab_2;
+package Lab_2.fileFolder;
 
 import Lab_2.services.files.abstracts.FileAttributes;
 import Lab_2.services.files.GeneralFileAttributes;
@@ -14,10 +14,7 @@ import java.util.*;
 
 public class SimpleGit {
 
-//    private static final String FOLDER_PATH = "C:\\Projects\\Java\\OOP\\Lab_2\\fileFolder";
-    //pc path
-    private static final String FOLDER_PATH = "C:\\Codes\\Java\\Lab_2\\fileFolder";
-//laptop path
+    private static final String FOLDER_PATH = "C:\\Projects\\Java\\OOP\\Lab_2\\fileFolder";
     private static final String COMMIT_FOLDER_PATH = FOLDER_PATH + File.separator + ".simplegit";
     private static final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("MMMM dd, yyyy 'at' hh:mm:ss a");
 
