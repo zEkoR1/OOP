@@ -198,6 +198,7 @@ public class SimpleGit {
         }
     }
 
+
     private static class FileAttributes {
         String fileName;
         String fileExtension;
