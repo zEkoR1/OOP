@@ -6,6 +6,9 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.nio.file.attribute.FileTime;
 import java.text.SimpleDateFormat;
 import java.util.*;
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+
 
 public class SimpleGit {
 
@@ -219,6 +222,7 @@ public class SimpleGit {
             this.lastModifiedTime = getFileLastModifiedTime(file);
 
             if (isImage()) {
+                calculateImageDimensions(file);
             } else if (isTextFile()) {
                 countTextFileAttributes(file);
             } else if (isProgramFile()) {
@@ -330,6 +334,18 @@ public class SimpleGit {
                     creationTime.equals(that.creationTime) &&
                     lastModifiedTime.equals(that.lastModifiedTime);
         }
+        private void calculateImageDimensions(File file) {
+            try {
+                BufferedImage bufferedImage = ImageIO.read(file);
+                if (bufferedImage != null) {
+                    this.imageWidth = bufferedImage.getWidth();
+                    this.imageHeight = bufferedImage.getHeight();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
 
 
         @Override
